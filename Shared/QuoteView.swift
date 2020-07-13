@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct QuoteView: View {
-    var scheme: ColourScheme
+    @EnvironmentObject var theme: Theme
+    
     var quote: String
     
     var body: some View {
@@ -27,6 +28,6 @@ struct QuoteView: View {
 
 struct QuoteView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteView(scheme: ColourScheme(), quote: "Hello")
+        QuoteView(quote: "Hello")
     }
 }

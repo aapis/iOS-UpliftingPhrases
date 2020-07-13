@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<string>Morning</string>
+				<string>Mid Day</string>
+				<string>Afternoon</string>
+				<string>Evening</string>
+				<string>Night</string>
+			</array>
+			<key>Key</key>
+			<string>COLOUR_SCHEME</string>
+			<key>Title</key>
+			<string>Colour Scheme</string>
+			<key>Titles</key>
+			<array/>
+			<key>New item - 2</key>
+			<string></string>
+			<key>New item</key>
+			<string></string>
+			<key>Item 0</key>
+			<string></string>
+			<key>DefaultValue</key>
+			<string>Automatic</string>
+		</dict>
+	</array>
+</dict>
+</plist>

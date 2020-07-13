@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct BannerImageView: View {
-    var scheme: ColourScheme
+    @EnvironmentObject var theme: Theme
+    
     var body: some View {
         ZStack {
               // commented out until images can be set by the user
@@ -16,31 +17,9 @@ struct BannerImageView: View {
 //                .resizable()
 //                .aspectRatio(contentMode: .fill)
             Rectangle()
-                .foregroundColor(scheme.background)
-                .background(LinearGradient(gradient: Gradient(colors: scheme.gradient), startPoint: .top, endPoint: .bottom))
+                .foregroundColor(theme.highlight)
+                .background(LinearGradient(gradient: Gradient(colors: theme.gradient), startPoint: .top, endPoint: .bottom))
                 .opacity(0.6)
-            
-            VStack {
-                HStack {
-                    Text("Daily Inspiration")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(scheme.text)
-                        .padding()
-                    Spacer()
-                }
-            
-                HStack {
-                    Text(_date: Date())
-                        .font(.subheadline)
-                        .bold()
-                        .foregroundColor(scheme.text)
-                        .offset(y: -20)
-                        .padding()
-                    Spacer()
-                }
-            }
-            .offset(y: -20)
         }
         .offset(y: -50)
         .frame(height: 250)
@@ -49,6 +28,6 @@ struct BannerImageView: View {
 
 struct BannerImage_Previews: PreviewProvider {
     static var previews: some View {
-        BannerImageView(scheme: ColourScheme())
+        BannerImageView()
     }
 }
